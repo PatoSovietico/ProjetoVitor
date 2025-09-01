@@ -13,7 +13,9 @@ import { CreateScenarioDto } from "../dto/create-scenario.dto";
 
     async execute(data: CreateScenarioDto){
         try{
-            const scenario = this. createScenarioRepository.create(data);
+            const scenario = await this. createScenarioRepository.create(data);
+            this.logger.log(`Scenario crated: ${scenario.title}`);
+            return scenario
         } catch (error){
             this.logger.error(error);
             throw error;
