@@ -1,6 +1,3 @@
-
-
-
 import { Injectable, Logger } from "@nestjs/common";
 import { ListScenarioRepository } from "../repository";
 
